@@ -1,0 +1,5 @@
+/* Optional host-page tweaks for <code-viewer> placement */
+code-viewer {
+  display: inline-block;
+  margin: 0.5rem;
+}

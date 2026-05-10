@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html id="top">
+<!--
+  WebDevBites_CompCodeViewer.html
+-->
+<head>
+  <title>WebDev Code Viewer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/ContentMenus.css" />
+  <link rel="stylesheet" href="../css/Content.css" />
+  <link rel="stylesheet" href="../css/help.css" />
+  <link rel="stylesheet" href="../css/ThemeWebDev.css" />
+  <link rel="stylesheet" href="../css/StylesPhoto.css" />
+  <link rel="stylesheet" href="../css/StylesSizerComp.css" />
+  <link rel="stylesheet" href="../css/StylesWebComponents.css" />
+  <script src="../js/ScriptsWebComponents.js"></script>
+  <script src="../js/Content.js"></script>
+  <script src="../js/ContentMenus.js"></script>
+  <link rel="stylesheet" href="../css/FigureSizer.css" />
+  <script src="../js/FigureSizer.js"></script>
+  <link rel="stylesheet" href="../css/link-nav.css" />
+  <link rel="stylesheet" href="../css/content-links.css" />
+  <script src="../js/cookies.js"></script>
+  <script src="../js/contentElements.js"></script>
+  <script src="../js/contentMessages.js"></script>
+  <link rel="stylesheet" href="../css/prism.css" />
+  <script src="../js/prism.js"></script>
+  <script src="Components/CodeViewerComponent/js/CodeViewer.js" defer></script>
+  <script>
+    function loadInExplorer() {
+      const loc = window.location;
+      if(loc === window.top.location) {
+        window.location = "ExploreWebDev.html?src=" + loc;
+      }
+    }
+    function load() {
+      loadInExplorer();
+      buildBottomMenu();
+      postFileName();
+      postHostMsg(makeMsg('url', location.href));
+      setPersistantElements();
+    }
+  </script>
+  <style>
+    .menuHeader {
+      padding:0.0rem 0.5rem 0.25rem 0.5rem;
+    }
+  </style>
+  <style>
+    code {
+      background: #eef;
+      padding: 0 3px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body id="github" onload="load()">
+
+  <!-- show-hide with 'about' message -->
+  <div id="about" class="hidden" onclick="this.classList.toggle('hidden')">
+    WebDevBites_CompCodeViewer.html<br />
+    copyright &copy; James Fawcett<br />
+    Revised: 09/25/2025
+  </div>
+
+  <content-block>
+    <header>
+      <!--<a class="repoLink" href="https://github.com/JimFawcett">JimFawcett Repositories</a>-->
+      <div id="pagetitle" class="header">
+        <h2 id="title">WebDev Bites: CodeViewer Component Demo</h2>
+        <h4 id="subtitle" class="indent">
+          resize-able code viewer 
+        </h4>
+      </div>
+      <div class="header" style="position:relative; padding:0.0em 0em 0.25em 0em; margin-top:0.125em; border:2px solid var(--dark);">
+        <a class="repoLinks" target="_blank" href="https://github.com/JimFawcett" style="color:var(--light); margin-top:0.25em; margin-left:1.5em;">About</a>
+        <a class="repoLinks" target="_self" href="WebDevHome.html" style="color:var(--light); margin-left:1.5em;">WebDev Track</a>
+      </div>
+    </header>
+  <h2>Code Viewer W3C Component</h2>
+  <code-viewer width="25rem"  bg-color="var(--light)" title-bg-color="#ccc" style="float:right; margin-inline-end:1rem;">
+    Figure 1. Prototype Viewer
+    <template slot="code"><style>
+  html {
+    position:static;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    margin: 0rem;
+    padding: 0rem;
+  }
+  body {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    padding:1rem 2rem;
+    margin: 0rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 5px solid green;
+  }
+  t-b {
+    display: block;
+    margin: 0.75rem 0rem;
+    max-width: 50em;
+  }
+</style></template>
+  </code-viewer>
+
+  <t-b>
+    This is a code viewer. Clicking on the image makes it larger. Clicking on the title 
+    makes it smaller.
+  </t-b>
+  <hr>
+  <t-b>
+    Yada yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada 
+    yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada 
+    yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada 
+  </t-b>
+  <t-b>
+    Yada yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada 
+    yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada 
+    yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada 
+  </t-b>
+  <t-b>
+    Yada yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada 
+    yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada 
+    yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada 
+  </t-b>
+  <t-b>
+    Yada yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada 
+    yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada 
+    yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada  yada yada 
+  </t-b>
+    <div style="height:15em;"></div>
+  </content-block>
+  <div id="bottomMenu">
+    <div id="keys" class="hidden"></div>
+    <div id="sections" class="hidden">
+      <div class="darkItem listheader" onclick="toggleSections()">Sections</div>
+      <div class="menuBody">
+        <a href="#top">top</a>
+        <a href="#bottom">bottom</a>
+      </div>
+    </div>
+    <div id="pages" class="hidden"></div>
+    <div id="url" class="hidden">url</div>
+    <div id="goto" class="hidden">url</div>
+  </div>
+  <a id="bottom"></a>
+  <script src="js/WebDevBitesPages.js"></script>
+  <script>buildPages()</script>
+  <script>createSiteNavMenu('goto')</script>
+  <script src="../js/link-nav.js" defer></script>
+  <script>
+    setCookie('#pages', 5, 10);
+  </script>
+</body>
+</html>
