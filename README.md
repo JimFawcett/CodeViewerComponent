@@ -8,7 +8,7 @@ The component has two rendering modes: a **plain mode** that displays literal te
 
 Open `CodeViewerComponent.html` in a browser to see the component floating beside body text with interactive width control.
 
-![CodeViewerComponent demo](pictures/Helmet_CapeCod_2012.jpg)
+<img src="pictures/CodeViewerComponent.png" width="400" alt="CodeViewerComponent demo">
 
 ## Installation
 
